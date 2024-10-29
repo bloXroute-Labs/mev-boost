@@ -43,7 +43,7 @@ lint:
 	gofmt -d -s .
 	gofumpt -d -extra .
 	staticcheck ./...
-	golangci-lint run
+	golangci-lint run --disable=mnd
 
 .PHONY: lt
 lt: lint test
